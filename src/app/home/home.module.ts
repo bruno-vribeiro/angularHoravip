@@ -5,12 +5,16 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { CadastroComponent } from './cadastro/cadastro.component';
+
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    CadastroComponent,
+    
   ],
   imports: [
     CommonModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { AutenticacaoService } from 'src/app/autenticacao/autenticacao.service';
 
 @Component({
@@ -22,8 +23,10 @@ export class LoginComponent implements OnInit {
     },
       (error)=>{
         alert('Usuario invalido');
-        console.log(error)
-        console.log(this.usuario, this.senha)
+        console.log(error);
+        console.log(this.usuario, this.senha);
+        const cadastro = true
+
       }
     );
   }

@@ -1,0 +1,210 @@
+body{
+  width: 940px;
+  height: 940px;
+  font-family: 'Inter', sans-serif;
+}
+.header {
+  width: 250px;
+  height: 940px;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 0px;
+}
+
+.img-logo{
+  width: 250px;
+  height: 87px;
+}
+
+.img-gerencia{
+  display: block;
+  width: 80px;
+  height: 122.35px;
+  border-radius: 100%;
+  background: #C4C4C4;
+  margin: 30px auto;
+}
+
+.nome-gerencia{
+width: 124px;
+height: 42.82px;
+font-size: 16px;
+line-height: 28px;
+margin: 0 auto;
+text-align: center;
+letter-spacing: 0.15px;
+
+color: #000000;
+}
+
+.span-gerencia{
+  font-size: 12px;
+}
+
+nav ul{
+ list-style: none;
+ padding: 15px;
+ margin-top: 45px;
+
+}
+
+.nav_li {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 34px;
+
+  letter-spacing: 0.15px;
+
+  color: #000000;
+}
+
+.nav_li:hover{
+   background: #113784;
+   border-radius: 10px;
+   color: #FFFFFF;
+}
+
+.nav_img{
+
+width: 24px;
+margin:0 15px;
+vertical-align: middle;
+// filter: invert();
+}
+
+.main{
+  position: absolute;
+  top: 0;
+  left: 251px;
+}
+
+.main_total{
+  display: flex;
+  list-style: none;
+}
+
+.list-total{
+margin-right: 31px;
+width: 258px;
+height: 104px;
+padding: 5px;
+
+
+box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 1px 12px rgba(0, 0, 0, 0.04);
+border-radius: 8px;
+}
+
+.list-total:first-child{
+
+  background: #228832;
+}
+
+.list-total:nth-child(2){
+
+  background: #E39F39;
+
+}
+.list-total:nth-child(3){
+  background: #B61313;
+
+}
+.list-total:last-child{
+  background: #0D78B4;
+
+}
+.list-total-titulos{
+margin: 8px;
+font-size: 14px;
+line-height: 28px;
+letter-spacing: 0.15px;
+color: #FFFFFF;
+
+
+}
+
+.list-total-valor{
+  margin: 8px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 48px;
+
+
+  letter-spacing: 0.15px;
+
+  color: #FFFFFF;
+
+}
+.list-total-img{
+  position: relative;
+  // filter: invert();
+  width: 38px;
+  top: -68px;
+  left: 171px;
+}
+
+main h2{
+line-height: 28px;
+margin-left: 70px;
+
+letter-spacing: 0.15px;
+
+color: #103681;
+}
+
+.main_cards{
+display: flex;
+list-style: none;
+}
+
+.list-cards{
+  width: 300px;
+height: 326px;
+margin-right: 56px;
+background: #FFFFFF;
+line-height: 28px;
+
+
+box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 1px 12px rgba(0, 0, 0, 0.04);
+border-radius: 8px;
+
+}
+
+.list-cards div{
+
+width: 300px;
+height: 161px;
+// background: url(image.png);
+border: 1px solid #000000;
+box-sizing: border-box;
+border-radius: 8px 8px 0px 0px;
+}
+
+.list-cards h3{
+  font-size: 14px;
+  margin-left: 25px;
+
+}
+
+.list-cards p{
+  font-size: 12px;
+  margin-left: 25px;
+
+}
+table{
+  width: 262px;
+  height: 181px;
+  margin-left: 25px;
+}
+.desafio{
+  font-size: 12px;
+}
+.detalhes,.status{
+  font-size:10px;
+
+}
+.status{
+  text-align:end
+}
+
+
+
