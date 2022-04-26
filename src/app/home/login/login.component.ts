@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AutenticacaoService } from 'src/app/autenticacao/autenticacao.service';
 
 @Component({
@@ -12,20 +12,23 @@ export class LoginComponent implements OnInit {
   usuario="";
   senha="";
 
-  constructor(private authService: AutenticacaoService) { }
+  constructor(
+    private authService: AutenticacaoService,
+    private router: Router,
+    ) { }
 
   ngOnInit(): void {
   }
 
   login(){
     this.authService.autenticar(this.usuario, this.senha).subscribe(()=>{
-      console.log("Autenticacao com sucesso!");
+      this.router.navigate(['./gerencia/controle']);
     },
       (error)=>{
         alert('Usuario invalido');
         console.log(error);
         console.log(this.usuario, this.senha);
-        const cadastro = true
+
 
       }
     );
