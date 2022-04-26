@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AutenticacaoService {
-
+  estabelecimento: any;
   constructor( private httpClient: HttpClient) { }
 
   autenticar(email: string, senha: string):Observable<any>{
@@ -13,5 +13,12 @@ export class AutenticacaoService {
     'https://api.horavip.exodus.eti.br/session/authenticate',
      {email: email, senha:senha}
      );
+  }
+
+  listar(){
+    return this.httpClient.get<Object[]>('https://api.horavip.exodus.eti.br/estabelecimento').subscribe(estabelecimento =>{
+      console.log(estabelecimento)
+      this.estabelecimento = estabelecimento
+    })
   }
 }
