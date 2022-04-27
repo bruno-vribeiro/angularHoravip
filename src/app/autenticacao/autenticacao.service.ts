@@ -35,12 +35,6 @@ export class AutenticacaoService {
     console.log(this.getOptions())
     return this.httpClient.get(
       'https://api.horavip.exodus.eti.br/estabelecimento/todos',this.getOptions()
-    );
-
-  // listar(){
-  //   return this.httpClient.get<Object[]>('https://api.horavip.exodus.eti.br/estabelecimento').subscribe(estabelecimento =>{
-  //     console.log(estabelecimento)
-  //     this.estabelecimento = estabelecimento
-  //   })
-  // }
-}}
+    )
+ }
+}

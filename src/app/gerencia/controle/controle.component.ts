@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { catchError, tap } from 'rxjs';
 import { AutenticacaoService } from 'src/app/autenticacao/autenticacao.service';
 
 @Component({
@@ -8,16 +9,21 @@ import { AutenticacaoService } from 'src/app/autenticacao/autenticacao.service';
   styleUrls: ['./controle.component.scss']
 })
 export class ControleComponent implements OnInit {
-
+ nome:any;
   constructor(
     private http: HttpClient,
     private authService: AutenticacaoService
     ) { }
 
   ngOnInit(): void {
-    this.authService.getEstabelecimetnos();
+    this.nome = this.authService.getEstabelecimetnos().pipe(
+      tap(data => JSON.stringify(data)),
 
 
-  }
+    );
+    console.log(this.nome);
+
+
+}
 
 }
