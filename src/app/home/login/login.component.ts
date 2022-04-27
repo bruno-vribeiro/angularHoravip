@@ -21,7 +21,8 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    this.authService.autenticar(this.usuario, this.senha).subscribe(()=>{
+    this.authService.autenticar(this.usuario, this.senha)
+    .subscribe(()=>{
       this.router.navigate(['./gerencia/controle']);
 
     },
@@ -29,7 +30,7 @@ export class LoginComponent implements OnInit {
         alert('Usuario invalido');
         console.log(error);
         console.log(this.usuario, this.senha);
-        console.log(this.authService.listar());
+        
 
 
       }
