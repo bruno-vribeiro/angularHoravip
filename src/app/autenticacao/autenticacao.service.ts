@@ -1,40 +1,36 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, tap } from 'rxjs';
+import { Observable, firstValueFrom } from 'rxjs';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AutenticacaoService {
   token: any;
 
+  private getOptions() {
+    let header = new HttpHeaders();
+    let headers = header.set('Authorization', 'Bearer ' + this.token);
+    const options = { headers };
+    return options;
+  }
+  constructor(private httpClient: HttpClient) {}
 
-  private getOptions(){
-    let header = new HttpHeaders;
-     let headers = header.set('Autrorization', 'Bearer '+ this.token);
-     const options = {headers};
-     return options;
-   }
-  constructor( private httpClient: HttpClient) { }
-
-  autenticar(email: string, senha: string):Observable<any>{
-    return this.httpClient.post(
-    'https://api.horavip.exodus.eti.br/session/authenticate',
-     {email: email, senha:senha}
-     ).pipe(
-       tap((response: any) =>{
-         console.log(response.token);
-         this.token = response.token;
-
-
-
-       })
-     )
+  async autenticar(email: string, senha: string) {
+    let retorno = await firstValueFrom(
+      this.httpClient.post<any>(
+        'https://api.horavip.exodus.eti.br/session/authenticate',
+        { email: email, senha: senha }
+      )
+    );
+    console.log(retorno);
+    this.token = retorno.token;
+    return retorno;
   }
 
-  getEstabelecimetnos():Observable<any>{
-    console.log(this.getOptions())
+  getEstabelecimentos(): Observable<any> {
     return this.httpClient.get(
-      'https://api.horavip.exodus.eti.br/estabelecimento/todos',this.getOptions()
-    )
- }
+      'https://api.horavip.exodus.eti.br/estabelecimento/todos',
+      this.getOptions()
+    );
+  }
 }

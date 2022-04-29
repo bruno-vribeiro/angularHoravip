@@ -169,11 +169,10 @@ border-radius: 8px;
 
 }
 
-.list-cards div{
+.list-cards div img{
 
 width: 300px;
 height: 161px;
-// background: url(image.png);
 border: 1px solid #000000;
 box-sizing: border-box;
 border-radius: 8px 8px 0px 0px;
@@ -182,7 +181,6 @@ border-radius: 8px 8px 0px 0px;
 .list-cards h3{
   font-size: 14px;
   margin-left: 25px;
-
 }
 
 .list-cards p{
@@ -192,11 +190,15 @@ border-radius: 8px 8px 0px 0px;
 }
 table{
   width: 262px;
-  height: 181px;
+  height: 169px;
   margin-left: 25px;
 }
 .desafio{
   font-size: 12px;
+}
+
+.descricao{
+  font-size:11px;
 }
 .detalhes,.status{
   font-size:10px;
@@ -205,6 +207,8 @@ table{
 .status{
   text-align:end
 }
+
+
 
 
 

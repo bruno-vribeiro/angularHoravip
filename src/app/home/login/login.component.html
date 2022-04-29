@@ -1,20 +1,38 @@
+<div class="contenier">
+  <header class="header">
+    <img
+      class="header_img-logo"
+      src="./assets/img/logo2.png"
+      alt="logo da empresa"
+    />
+  </header>
+  <main>
+    <h2>Acesse sua conta</h2>
+    <form (ngSubmit)="login()">
+      <input
+        class="inputDados"
+        type="email"
+        placeholder="E-mail"
+        [(ngModel)]="usuario"
+        name="email"
+      />
+      <input
+        class="inputDados"
+        type="password"
+        placeholder="Senha"
+        [(ngModel)]="senha"
+        name="senha"
+      />
+      <label id="labelCheckbox" for="checkbox"
+        ><input type="checkbox" />Lembra pra mim</label
+      >
 
-
-   <div class="contenier">
-    <header>
-        <img class="header_img-logo" src="./assets/img/logo2.png" alt="logo da empresa">
-    </header>
-    <main>
-        <h2>Acesse sua conta</h2>
-        <form (ngSubmit)="login()">
-            <input class="inputDados" type="email" placeholder="E-mail" [(ngModel)]="usuario" name="email">
-            <input class="inputDados" type="password" placeholder="Senha" [(ngModel)]="senha" name="senha">
-            <label id="labelCheckbox" for="checkbox"><input type="checkbox">Lembra pra mim</label>
-
-            <input class="btn entra inputDados" id="botaoLogin" type="submit" value="Entrar" >
-        </form>
-    </main>
-  </div>
-
-
- 
+      <input
+        class="btn entra inputDados"
+        id="botaoLogin"
+        type="submit"
+        value="Entrar"
+      />
+    </form>
+  </main>
+</div>
