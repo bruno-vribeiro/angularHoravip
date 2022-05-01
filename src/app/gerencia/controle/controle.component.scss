@@ -37,7 +37,9 @@ color: #000000;
 }
 
 .span-gerencia{
+  display: block;
   font-size: 12px;
+  text-align: center;
 }
 
 nav ul{
@@ -207,6 +209,45 @@ table{
 .status{
   text-align:end
 }
+
+@media only screen and(max-width:948px) {
+  .main_total {
+
+    flex-wrap: wrap;
+
+  }
+  .list-total{
+
+margin: 10px auto;
+  }
+  .list-cards{
+    margin: 15px auto;
+  }
+  h2{
+    text-align: center;
+  }
+
+  .main_cards{
+    flex-wrap:wrap ;
+  }
+}
+
+@media only screen and(max-width:843px) {
+
+  .list-total{
+    width: -webkit-fill-available;
+    margin: 15px 30px 15px 0;
+  }
+  .list-total-valor{
+    margin: 8px 0 8px 8%;
+  }
+  .list-total-img{
+    margin: 8px 0 8px 8%;
+  }
+
+}
+
+
 
 
 

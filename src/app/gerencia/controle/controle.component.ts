@@ -30,11 +30,11 @@ export class ControleComponent implements OnInit {
       this.nomes.push(estabelecimentos[3].nome);
 
       this.descricao.push(estabelecimentos[0].servicos[0].descricao);
-      this.descricao.push(estabelecimentos[1].servicos[0].descricao);
-      this.descricao.push(estabelecimentos[1].servicos[1].descricao);
+      // this.descricao.push(estabelecimentos[1].servicos[0].descricao);
+      // this.descricao.push(estabelecimentos[1].servicos[1].descricao);
       // this.descricao.push(estabelecimentos[2].servicos[2].descricao);
       // this.descricao.push(estabelecimentos[3].servicos[3].descricao);
-      console.log(this.descricao)
+      // console.log(this.descricao)
     });
   }
 }
