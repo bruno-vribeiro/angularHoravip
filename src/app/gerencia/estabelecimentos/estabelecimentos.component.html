@@ -41,35 +41,35 @@
 
     </div>
     <div class="principal">
+
       <div class="principal_header">
         <button type="button" class="button"><img src="./assets/img/gerencia/Filter.webp" alt=""><span class="span-filtro">Filtro</span></button>
         <input class="search" type="search" name="search" placeholder="Busca Estabecimento">
+
+
         <div class="secudaria">
-          <button type="button" class="aprovar" ng-click="consoleId()"><span class="span-button1">Bloquear</span></button>
 
-          <button type="button" class="aprovar"><span class="span-button2">Liberar</span></button>
-        </div>
-      </div>
+            <button type="button" class="aprovar" ng-click="consoleId()"><span class="span-button1">Bloquear</span></button>
+            <button type="button" class="aprovar"><span class="span-button2">Liberar</span></button>
+                    </div>
+                  </div>
 
-      <table class="table" >
-        <tr class="th-linha">
+                  <table class="table" >
+                    <tr class="th-linha">
+              <th width="10px"><input type="checkbox" name="checkbox"></th>
+              <th width="10px"></th>
+              <th>name</th>
+              <th>user status</th>
+              <th>payment staus</th>
+              <th>amount</th>
+              <th></th>
+              <th></th>
+              <th>...</th>
+                    </tr >
+                    <tr *ngFor="let estabelecimento of estabelecimentos">
+            <td class="width"><input type="checkbox" ></td>
+            <td>
 
-            <th width="10px"><input type="checkbox" name="checkbox"></th>
-            <th width="10px"></th>
-
-            <th>name</th>
-            <th>user status</th>
-            <th>payment staus</th>
-            <th>amount</th>
-            <th></th>
-
-            <th></th>
-
-            <th>...</th>
-        </tr >
-        <tr *ngFor="let estabelecimento of estabelecimentos">
-          <td class="width"><input type="checkbox" name="checkbox" #campo="ngModel" ></td>
-          <td>
             <select>
               <option value=""></option>
               <option value="">Carlos</option>
@@ -87,6 +87,7 @@
           <td>...</td>
                  </tr>
       </table>
+
     </div>
   </main>
 </div>

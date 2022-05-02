@@ -28,10 +28,12 @@ export class EstabelecimentosComponent implements OnInit {
     this.authService.getEstabelecimentos().subscribe((estabelecimentos) => {
       console.log(estabelecimentos);
       this.estabelecimentos = estabelecimentos;
-      
+
 
     })
   }
-
+consoleId(){
+  alert('oi')
+}
 
 }
