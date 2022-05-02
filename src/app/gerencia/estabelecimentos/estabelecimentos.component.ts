@@ -9,10 +9,15 @@ import { Component, OnInit, NgModule } from '@angular/core';
 })
 export class EstabelecimentosComponent implements OnInit {
 
-  nome:any;
-  status:any;
-  pagamento:any;
-  valor: any;
+  estabelecimentos=[
+    {
+      nome:"",
+      status:"",
+      formasPagamento:[],
+      slogan:"",
+      valor:""
+    }
+  ]
 
   constructor(
     private authService: AutenticacaoService,
@@ -21,15 +26,12 @@ export class EstabelecimentosComponent implements OnInit {
 
   ngOnInit(): void {
     this.authService.getEstabelecimentos().subscribe((estabelecimentos) => {
-      console.log(estabelecimentos)
-      this.nome = estabelecimentos[0].nome;
-      this.status = estabelecimentos[0].status;
-      this.pagamento = estabelecimentos[0].formasPagamento;
-      this.valor = estabelecimentos[0].mediaNota
+      console.log(estabelecimentos);
+      this.estabelecimentos = estabelecimentos;
+      
+
     })
   }
 
-  consoleId(){
-    console.log('oi')
-  }
+
 }

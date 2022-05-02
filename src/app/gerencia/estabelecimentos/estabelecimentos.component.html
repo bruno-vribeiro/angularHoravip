@@ -51,7 +51,7 @@
         </div>
       </div>
 
-      <table class="table">
+      <table class="table" >
         <tr class="th-linha">
 
             <th width="10px"><input type="checkbox" name="checkbox"></th>
@@ -61,13 +61,14 @@
             <th>user status</th>
             <th>payment staus</th>
             <th>amount</th>
+            <th></th>
 
             <th></th>
 
             <th>...</th>
-        </tr>
-         <tr>
-          <td class="width"><input type="checkbox" name="checkbox"></td>
+        </tr >
+        <tr *ngFor="let estabelecimento of estabelecimentos">
+          <td class="width"><input type="checkbox" name="checkbox" #campo="ngModel" ></td>
           <td>
             <select>
               <option value=""></option>
@@ -75,16 +76,16 @@
               <option value="">bruno</option>
             </select>
           </td>
-          <td>
-            <strong>{{nome}}</strong><br>
-
+          <td >
+            <strong>{{estabelecimento.nome}}</strong>
           </td>
-          <td>{{status}}</td>
-          <td>{{pagamento}}</td>
-          <td>{{valor}}</td>
+          <td>{{estabelecimento.status}}</td>
+          <td>{{estabelecimento.formasPagamento[0]}}</td>
+          <td>{{estabelecimento.slogan}}</td>
+          <td>{{estabelecimento.valor}}</td>
           <td>View More</td>
           <td>...</td>
-        </tr>
+                 </tr>
       </table>
     </div>
   </main>
