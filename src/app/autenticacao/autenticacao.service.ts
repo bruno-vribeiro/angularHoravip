@@ -31,6 +31,9 @@ export class AutenticacaoService {
     return this.httpClient.get(
       'https://api.horavip.exodus.eti.br/estabelecimento/todos',
       this.getOptions()
+
     );
+    
+
   }
 }

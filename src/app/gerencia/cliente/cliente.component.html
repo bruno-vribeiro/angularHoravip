@@ -1,1 +1,89 @@
-<p>cliente works!</p>
+<div class="body">
+<header class="header">
+  <img class="img-logo" src="./assets/img/logo2.png" alt="logo da empresa">
+
+  <img class="img-gerencia" src="" alt="">
+
+  <h2 class="nome-gerencia">
+    Nome completo<br><span class="span-gerencia">Gerência</span>
+  </h2>
+  <nav>
+    <ul>
+      <li class="nav_li">
+        <img class="nav_img" src="./assets/img/gerencia/casa (2).png" alt="imagem de uma casa">
+
+        <a routerLink="../controle">Início</a>
+      </li>
+      <li class="nav_li">
+        <img class="nav_img" src="./assets/img/gerencia/predio.png" alt="imagem de um prédio">
+
+        <a routerLink="../estabelecimentos">Estabelecimento</a>
+      </li>
+      <li class="nav_li">
+        <img class="nav_img" src="./assets/img/gerencia/cliente.png" alt="imagem de uma pessoa">
+
+        <a routerLink="../cliente">Cliente</a>
+      </li>
+      <li class="nav_li">
+
+        <img class="nav_img" src="./assets/img/gerencia/comentario.svg" alt="imagem de um Comentários">
+
+        Comentários
+      </li>
+    </ul>
+  </nav>
+  <button class="botao-sair"><a href="http://localhost:4200/home">Sair</a></button>
+</header>
+<main class="main">
+  <div class="main_estabelecimento">
+    <h2 class="h2-estabelecimento">Clientes</h2>
+    <p>Todos Ativo Bloqueados</p>
+  </div>
+  <div class="principal">
+    <div class="principal_div">
+    <div class="principal_header">
+      <!-- <button type="button" class="button"><img src="./assets/img/gerencia/Filter.webp" alt=""><span class="span-filtro">Filtro</span></button>
+      <input class="search" type="search" name="search" placeholder="Busca Estabecimento"> -->
+    </div>
+      <div class="secudaria">
+          <button type="button" class="aprovar" ng-click="consoleId()"><span class="span-button1">Bloquear</span></button>
+          <button type="button" class="aprovar"><span class="span-button2">Liberar</span></button>
+                  </div>
+                </div>
+                <table class="table" >
+                  <tr class="th-linha">
+            <th width="10px"><input type="checkbox" name="checkbox"></th>
+            <th width="10px"></th>
+            <th>name</th>
+            <th>user status</th>
+            <th>payment staus</th>
+            <th>amount</th>
+            <th></th>
+            <th></th>
+            <th>...</th>
+                  </tr >
+                  <tr *ngFor="let estabelecimento of estabelecimentos">
+          <td class="width"><input type="checkbox" ></td>
+          <td>
+          <select>
+            <option value=""></option>
+            <option value="">Carlos</option>
+            <option value="">bruno</option>
+          </select>
+        </td>
+        <td >
+          <strong>{{estabelecimento.nome}}</strong>
+        </td>
+        <td>{{estabelecimento.status}}</td>
+        <td>{{estabelecimento.formasPagamento[0]}}</td>
+        <td>{{estabelecimento.slogan}}</td>
+        <td>{{estabelecimento.valor}}</td>
+        <td><button class="botao-vermais">+</button></td>
+        <td><button class="botao-vermais potinhos">+</button></td>
+               </tr>
+    </table>
+  </div>
+</main>
+</div>
+
+

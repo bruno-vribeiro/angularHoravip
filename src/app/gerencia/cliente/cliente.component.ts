@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { AutenticacaoService } from './../../autenticacao/autenticacao.service';
+import { Component, OnInit, NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-cliente',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClienteComponent implements OnInit {
 
-  constructor() { }
+  estabelecimentos=[
+    {
+      nome:"",
+      status:"",
+      formasPagamento:[],
+      slogan:"",
+      valor:""
+    }
+  ]
+
+  constructor(
+    private authService: AutenticacaoService
+  ) { }
 
   ngOnInit(): void {
+    this.authService.getEstabelecimentos().subscribe((estabelecimentos) => {
+      console.log(estabelecimentos);
+      this.estabelecimentos = estabelecimentos;
+
+
+    })
   }
 
 }

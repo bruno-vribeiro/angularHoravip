@@ -2,6 +2,29 @@ body, html{
   margin: 0;
   font-family: 'Inter', sans-serif;
 }
+.botao-sair{
+  width: 80%;
+  margin: 0 10% 0 10%;
+  background: #ff2232;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+}
+.botao-vermais{
+  width: 100%;
+  background: #ff2232;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 19px;
+  color: #ffffff;
+  border: none;
+}
 
 
 

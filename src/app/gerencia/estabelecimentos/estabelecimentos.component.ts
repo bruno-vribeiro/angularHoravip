@@ -7,7 +7,7 @@ import { Component, OnInit, NgModule } from '@angular/core';
   styleUrls: ['./estabelecimentos.component.scss']
 })
 export class EstabelecimentosComponent implements OnInit {
-  
+
   estabelecimentos=[
     {
       nome:"",
@@ -17,17 +17,23 @@ export class EstabelecimentosComponent implements OnInit {
       valor:""
     }
   ]
+  estado='oi'
+
 
   constructor(
-    private authService: AutenticacaoService) { }
+    private authService: AutenticacaoService) {
+    }
 
   ngOnInit(): void {
     this.authService.getEstabelecimentos().subscribe((estabelecimentos) => {
       console.log(estabelecimentos);
+
       this.estabelecimentos = estabelecimentos;
 
 
+
     })
+
   }
 
 
