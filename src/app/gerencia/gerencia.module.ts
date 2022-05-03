@@ -5,13 +5,15 @@ import { GerenciaRoutingModule } from './gerencia-routing.module';
 import { GerenciaComponent } from './gerencia.component';
 import { ControleComponent } from './controle/controle.component';
 import { EstabelecimentosComponent } from './estabelecimentos/estabelecimentos.component';
+import { ClienteComponent } from './cliente/cliente.component';
 
 
 @NgModule({
   declarations: [
     GerenciaComponent,
     ControleComponent,
-    EstabelecimentosComponent
+    EstabelecimentosComponent,
+    ClienteComponent
   ],
   imports: [
     CommonModule,

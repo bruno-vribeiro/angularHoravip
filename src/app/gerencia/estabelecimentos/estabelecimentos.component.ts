@@ -7,7 +7,7 @@ import { Component, OnInit, NgModule } from '@angular/core';
   styleUrls: ['./estabelecimentos.component.scss']
 })
 export class EstabelecimentosComponent implements OnInit {
-
+  
   estabelecimentos=[
     {
       nome:"",
