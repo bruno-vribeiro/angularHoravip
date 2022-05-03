@@ -1,7 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+
 import { AutenticacaoService } from './../../autenticacao/autenticacao.service';
 import { Component, OnInit, NgModule } from '@angular/core';
-
 @Component({
   selector: 'app-estabelecimentos',
   templateUrl: './estabelecimentos.component.html',
@@ -20,9 +19,7 @@ export class EstabelecimentosComponent implements OnInit {
   ]
 
   constructor(
-    private authService: AutenticacaoService,
-    private http: HttpClient
-    ) { }
+    private authService: AutenticacaoService) { }
 
   ngOnInit(): void {
     this.authService.getEstabelecimentos().subscribe((estabelecimentos) => {
@@ -32,8 +29,7 @@ export class EstabelecimentosComponent implements OnInit {
 
     })
   }
-consoleId(){
-  alert('oi')
-}
+
+
 
 }

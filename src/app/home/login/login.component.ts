@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { AutenticacaoService } from 'src/app/autenticacao/autenticacao.service';
+import { Subscribable } from 'rxjs'
 
 @Component({
   selector: 'app-login',
