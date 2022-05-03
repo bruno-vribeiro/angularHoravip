@@ -37,22 +37,19 @@
     <div class="main_estabelecimento">
       <h2 class="h2-estabelecimento"> Estabelecimento</h2>
       <p>Todos Ativo Bloqueados</p>
-      <p class="p">Valor Total a Receber:<span>R$9.000,00</span></p>
-
     </div>
     <div class="principal">
-
+      <div class="principal_div">
       <div class="principal_header">
         <button type="button" class="button"><img src="./assets/img/gerencia/Filter.webp" alt=""><span class="span-filtro">Filtro</span></button>
         <input class="search" type="search" name="search" placeholder="Busca Estabecimento">
-
-
+      </div>
         <div class="secudaria">
-
             <button type="button" class="aprovar" ng-click="consoleId()"><span class="span-button1">Bloquear</span></button>
             <button type="button" class="aprovar"><span class="span-button2">Liberar</span></button>
                     </div>
                   </div>
+
 
                   <table class="table" >
                     <tr class="th-linha">
@@ -69,7 +66,6 @@
                     <tr *ngFor="let estabelecimento of estabelecimentos">
             <td class="width"><input type="checkbox" ></td>
             <td>
-
             <select>
               <option value=""></option>
               <option value="">Carlos</option>
@@ -87,7 +83,6 @@
           <td>...</td>
                  </tr>
       </table>
-
     </div>
   </main>
 </div>
