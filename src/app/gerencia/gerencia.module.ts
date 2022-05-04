@@ -6,6 +6,7 @@ import { GerenciaComponent } from './gerencia.component';
 import { ControleComponent } from './controle/controle.component';
 import { EstabelecimentosComponent } from './estabelecimentos/estabelecimentos.component';
 import { ClienteComponent } from './cliente/cliente.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,8 +18,11 @@ import { ClienteComponent } from './cliente/cliente.component';
   ],
   imports: [
     CommonModule,
-    GerenciaRoutingModule
+    GerenciaRoutingModule,
+    FormsModule,
+
   ],
   exports: [GerenciaComponent]
+
 })
 export class GerenciaModule { }

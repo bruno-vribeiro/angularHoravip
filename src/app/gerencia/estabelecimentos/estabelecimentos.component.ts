@@ -1,6 +1,7 @@
 
 import { AutenticacaoService } from './../../autenticacao/autenticacao.service';
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit, NgModule, Input, SimpleChange } from '@angular/core';
+
 @Component({
   selector: 'app-estabelecimentos',
   templateUrl: './estabelecimentos.component.html',
@@ -14,10 +15,26 @@ export class EstabelecimentosComponent implements OnInit {
       status:"",
       formasPagamento:[],
       slogan:"",
-      valor:""
+      valor:"",
+      _id:""
     }
   ]
-  estado='oi'
+ estado: boolean = false;
+ id:string = "";
+ bloquear(estado: boolean,id: string){
+   estado = this.estado;
+   id = this.id
+  console.log(estado,id);
+ }
+
+ checkboxChange(event:any){
+  this.estado=event.target.checked
+  this.id=(event.target.id);
+  this.bloquear(this.estado,this.id)
+
+
+ }
+
 
 
   constructor(
@@ -28,13 +45,20 @@ export class EstabelecimentosComponent implements OnInit {
     this.authService.getEstabelecimentos().subscribe((estabelecimentos) => {
       console.log(estabelecimentos);
 
+
       this.estabelecimentos = estabelecimentos;
 
 
 
     })
 
+
+
+
+
   }
+
+
 
 
 

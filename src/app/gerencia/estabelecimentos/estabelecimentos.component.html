@@ -78,7 +78,11 @@
           <th>...</th>
         </tr>
         <tr *ngFor="let estabelecimento of estabelecimentos">
-          <td class="width"><input type="checkbox" (ngModel)='estado'/></td>
+          <td class="width">
+
+              <input [id]='estabelecimento._id' type="checkbox" (change)="checkboxChange($event)" />
+
+          </td>
           <td>
             <select>
               <option value=""></option>
@@ -87,7 +91,7 @@
             </select>
           </td>
           <td>
-            <strong>{{ estabelecimento.nome }}</strong>
+            <strong>{{ estabelecimento._id }}</strong>
           </td>
           <td>{{ estabelecimento.status }}</td>
           <td>{{ estabelecimento.formasPagamento[0] }}</td>
