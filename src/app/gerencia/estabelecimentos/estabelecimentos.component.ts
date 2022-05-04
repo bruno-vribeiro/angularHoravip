@@ -13,6 +13,7 @@ import {
   styleUrls: ['./estabelecimentos.component.scss'],
 })
 export class EstabelecimentosComponent implements OnInit {
+  user!: string;
   estabelecimentos = [
     {
       nome: '',
@@ -41,5 +42,6 @@ export class EstabelecimentosComponent implements OnInit {
       console.log(estabelecimentos);
       this.estabelecimentos = estabelecimentos;
     });
+    this.user = this.authService.user;
   }
 }

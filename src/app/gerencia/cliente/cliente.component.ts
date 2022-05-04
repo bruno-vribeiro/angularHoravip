@@ -7,7 +7,7 @@ import { Component, OnInit, NgModule } from '@angular/core';
   styleUrls: ['./cliente.component.scss']
 })
 export class ClienteComponent implements OnInit {
-
+  user!: string;
   estabelecimentos=[
     {
       nome:"",
@@ -28,7 +28,8 @@ export class ClienteComponent implements OnInit {
       this.estabelecimentos = estabelecimentos;
 
 
-    })
+    });
+    this.user = this.authService.user;
   }
 
 }
