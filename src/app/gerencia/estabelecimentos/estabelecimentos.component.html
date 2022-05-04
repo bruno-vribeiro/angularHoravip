@@ -58,7 +58,7 @@
         </div>
         <div class="secudaria">
           <button type="button" class="aprovar" ng-click="consoleId()">
-            <span class="span-button1">Bloquear</span>
+            <span class="span-button1" (click)="bloquear()">Bloquear</span>
           </button>
           <button type="button" class="aprovar">
             <span class="span-button2">Liberar</span>
@@ -91,7 +91,7 @@
             </select>
           </td>
           <td>
-            <strong>{{ estabelecimento._id }}</strong>
+            <strong>{{ estabelecimento.nome }}</strong>
           </td>
           <td>{{ estabelecimento.status }}</td>
           <td>{{ estabelecimento.formasPagamento[0] }}</td>
