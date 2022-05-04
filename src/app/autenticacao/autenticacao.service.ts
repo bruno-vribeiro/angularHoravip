@@ -6,6 +6,7 @@ import { Observable, firstValueFrom } from 'rxjs';
 })
 export class AutenticacaoService {
   token: any;
+  user!: string;
 
   private getOptions() {
     let header = new HttpHeaders();
@@ -23,7 +24,9 @@ export class AutenticacaoService {
       )
     );
     console.log(retorno);
+    console.log(retorno.user.nome)
     this.token = retorno.token;
+    this.user = retorno.user.nome;
     return retorno;
   }
 
@@ -33,7 +36,7 @@ export class AutenticacaoService {
       this.getOptions()
 
     );
-    
+
 
   }
 }

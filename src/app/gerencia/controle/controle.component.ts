@@ -8,6 +8,7 @@ import { AutenticacaoService } from 'src/app/autenticacao/autenticacao.service';
   styleUrls: ['./controle.component.scss'],
 })
 export class ControleComponent implements OnInit {
+  user!: string;
   logos:     Object[] = [];
   nomes:     Object[] = [];
   descricao: Object[] = [];
@@ -36,5 +37,7 @@ export class ControleComponent implements OnInit {
       // this.descricao.push(estabelecimentos[3].servicos[3].descricao);
       // console.log(this.descricao)
     });
+    this.user = this.authService.user;
+    
   }
 }
