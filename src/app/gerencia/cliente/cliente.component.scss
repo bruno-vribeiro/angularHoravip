@@ -217,6 +217,11 @@ select {
   width: 88px;
   height: 40px;
 }
+@media only screen and(max-width:1099px){
+  .nav_li{
+display: grid;
+  }
+}
 @media only screen and(max-width:1112px) {
   .table {
     width: 788px;
