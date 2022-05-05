@@ -1,13 +1,11 @@
 <div class="principal-container">
   <header class="header">
     <img class="img-logo" src="./assets/img/logo2.png" alt="logo da empresa" />
-
-    <img class="img-gerencia" src="" alt="" />
-
+    <div class="img-gerencia">
+      <img src="" alt="" />
+    </div>
     <h2 class="nome-gerencia">
       {{user}}</h2>
-
-
     <nav>
       <ul>
         <li class="nav_li">
@@ -17,7 +15,7 @@
             alt="imagem de uma casa"
           />
 
-          Início
+          <span>Início</span>
         </li>
         <li class="nav_li">
           <img
@@ -25,7 +23,7 @@
             src="./assets/img/gerencia/predio.png"
             alt="imagem de um prédio"
           />
-          <a routerLink="../estabelecimentos">Estabelecimento</a>
+          <a routerLink="../estabelecimentos"><span>Estabelecimento</span></a>
         </li>
         <li class="nav_li">
           <img
@@ -33,7 +31,7 @@
             src="./assets/img/gerencia/cliente.png"
             alt="imagem de uma pessoa"
           />
-          Cliente
+          <span>Cliente</span>
         </li>
         <li class="nav_li">
           <img
@@ -41,7 +39,7 @@
             src="./assets/img/gerencia/comentario.svg"
             alt="imagem de um Comentários"
           />
-          Comentários
+          <span>Comentários</span>
         </li>
       </ul>
     </nav>

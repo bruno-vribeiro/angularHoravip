@@ -41,7 +41,7 @@ color: #000000;
 
 nav ul{
  list-style: none;
- padding: 15px;
+ padding: 10px;
  margin-top: 45px;
 
 }
@@ -50,13 +50,12 @@ nav a {
 }
 
 .nav_li {
+
   padding: 10px;
   font-weight: bold;
   font-size: 14px;
   line-height: 34px;
-
   letter-spacing: 0.15px;
-
   color: #000000;
 }
 
@@ -69,7 +68,7 @@ nav a {
 .nav_img{
 
 width: 24px;
-margin:0 15px;
+margin:0 15px 0 0;
 vertical-align: middle;
 filter:invert(100%)
 }
@@ -143,7 +142,7 @@ color: #FFFFFF;
   filter: invert(100%);
   width: 38px;
   float: right;
-  top: -76px;
+  top: -80px;
 
 }
 
@@ -163,26 +162,20 @@ list-style: none;
 
 .list-cards{
   width: 300px;
-height: 326px;
-margin-right: 56px;
-background: #FFFFFF;
-line-height: 28px;
-
-
-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 1px 12px rgba(0, 0, 0, 0.04);
-border-radius: 8px;
-
+  height: 326px;
+  margin-right: 56px;
+  background: #FFFFFF;
+  line-height: 28px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 1px 12px rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
 }
-
 .list-cards div img{
-
-width: 300px;
-height: 161px;
-border: 1px solid #000000;
-box-sizing: border-box;
-border-radius: 8px 8px 0px 0px;
+  width: 300px;
+  height: 161px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 8px 8px 0px 0px;
 }
-
 .list-cards h3{
   font-size: 14px;
   margin-left: 25px;
@@ -212,17 +205,23 @@ table{
 .status{
   text-align:end
 }
-
+@media only screen and(max-width:1060px) {
+  .main_cards{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .list-cards{
+    margin-bottom: 20px;
+  }
+  
+}
 @media only screen and(max-width:948px) {
   .main_total {
-
     flex-wrap: wrap;
-
   }
   .list-total{
-
-margin: 10px auto;
-  }
+    margin: 10px auto;
+      }
   .list-cards{
     margin: 15px auto;
   }
@@ -234,9 +233,10 @@ margin: 10px auto;
     flex-wrap:wrap ;
   }
 }
-
 @media only screen and(max-width:843px) {
-
+  .nav_img{
+    display:none;
+  }
   .list-total{
     width: -webkit-fill-available;
     margin: 15px 30px 15px 0;
@@ -246,6 +246,21 @@ margin: 10px auto;
   }
   .list-total-img{
     margin: 8px 0 8px 8%;
+  }
+
+}
+@media only screen and(max-width:654px) {
+  .nav_img{
+    display: flex;
+    filter: invert(0);
+    margin:0 auto;
+    width: 50%;
+  }
+  .nav_img:hover{
+    filter: invert(100%);
+  }
+  .nav_li span{
+    display:none;
   }
 
 }
