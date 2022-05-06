@@ -1,19 +1,21 @@
 <div class="body">
   <header class="header">
     <img class="img-logo" src="./assets/img/logo2.png" alt="logo da empresa" />
-    <img class="img-gerencia" src="" alt="" />
+    <div class="img-gerencia">
+      <img src="" alt="" />
+    </div>
     <h2 class="nome-gerencia">
-      {{user}}
+      {{ user }}
     </h2>
     <nav>
       <ul>
         <li class="nav_li">
           <a routerLink="../controle">
-          <img
-            class="nav_img"
-            src="./assets/img/gerencia/casa (2).png"
-            alt="imagem de uma casa"
-          />
+            <img
+              class="nav_img"
+              src="./assets/img/gerencia/casa (2).png"
+              alt="imagem de uma casa"
+            />
             <span>Início</span>
           </a>
         </li>
@@ -27,13 +29,14 @@
         </li>
         <li class="nav_li">
           <a routerLink="../cliente">
-          <img
-            class="nav_img"
-            src="./assets/img/gerencia/cliente.png"
-            alt="imagem de uma pessoa"
-          />
-          <span>Cliente</span>
+            <img
+              class="nav_img"
+              src="./assets/img/gerencia/cliente.png"
+              alt="imagem de uma pessoa"
+            />
+            <span>Cliente</span>
           </a>
+        </li>
 
         <li class="nav_li">
           <img
@@ -83,9 +86,11 @@
         </tr>
         <tr *ngFor="let estabelecimento of estabelecimentos">
           <td class="width">
-
-              <input [id]='estabelecimento._id' type="checkbox" (change)="checkboxChange($event)" />
-
+            <input
+              [id]="estabelecimento._id"
+              type="checkbox"
+              (change)="checkboxChange($event)"
+            />
           </td>
           <td>
             <select>
@@ -99,7 +104,7 @@
           </td>
           <td>{{ estabelecimento.status }}</td>
           <td>{{ estabelecimento.formasPagamento[0] }}</td>
-          <td>{{ estabelecimento.slogan }}{{estabelecimento.nome}}</td>
+          <td>{{ estabelecimento.slogan }}{{ estabelecimento.nome }}</td>
           <td>{{ estabelecimento.valor }}</td>
           <td><button class="botao-vermais">+</button></td>
           <td><button class="botao-vermais pontinhos">+</button></td>
