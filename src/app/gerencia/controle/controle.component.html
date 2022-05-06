@@ -5,7 +5,8 @@
       <img src="" alt="" />
     </div>
     <h2 class="nome-gerencia">
-      {{user}}</h2>
+      {{ user }}
+    </h2>
     <nav>
       <ul>
         <li class="nav_li">
@@ -18,20 +19,24 @@
           <span>Início</span>
         </li>
         <li class="nav_li">
-          <img
-            class="nav_img"
-            src="./assets/img/gerencia/predio.png"
-            alt="imagem de um prédio"
-          />
-          <a routerLink="../estabelecimentos"><span>Estabelecimento</span></a>
+          <a routerLink="../estabelecimentos">
+            <img
+              class="nav_img"
+              src="./assets/img/gerencia/predio.png"
+              alt="imagem de um prédio"
+            />
+            <span>Estabelecimento</span>
+          </a>
         </li>
         <li class="nav_li">
-          <img
-            class="nav_img"
-            src="./assets/img/gerencia/cliente.png"
-            alt="imagem de uma pessoa"
-          />
-          <span>Cliente</span>
+          <a routerLink="../cliente">
+            <img
+              class="nav_img"
+              src="./assets/img/gerencia/cliente.png"
+              alt="imagem de uma pessoa"
+            />
+            <span>Cliente</span>
+          </a>
         </li>
         <li class="nav_li">
           <img
@@ -43,7 +48,9 @@
         </li>
       </ul>
     </nav>
-    <button class="botao-sair"><a href="http://localhost:4200/home">Sair</a></button>
+    <button class="botao-sair">
+      <a href="http://localhost:4200/home">Sair</a>
+    </button>
   </header>
   <main class="main">
     <ul class="main_total">
@@ -115,7 +122,9 @@
             <td class="desafio">Titulo do Desafio</td>
           </tr>
           <tr>
-            <td class="descricao">{{ descricao[1] }}&nbsp;{{descricao[2]}}</td>
+            <td class="descricao">
+              {{ descricao[1] }}&nbsp;{{ descricao[2] }}
+            </td>
           </tr>
           <tr>
             <td class="detalhes">Encerramento</td>
@@ -169,7 +178,7 @@
     <ul class="main_cards">
       <li class="list-cards">
         <div>
-          <img src="" alt="">
+          <img src="" alt="" />
         </div>
         <table>
           <tr>
@@ -179,16 +188,14 @@
             <td class="desafio">Titulo do Desafio</td>
           </tr>
           <tr>
-            <td class="detalhes">
-                Encerramento
-            </td>
+            <td class="detalhes">Encerramento</td>
             <td class="status">Aprova</td>
           </tr>
         </table>
       </li>
       <li class="list-cards">
         <div>
-          <img src="" alt="">
+          <img src="" alt="" />
         </div>
         <table>
           <tr>
@@ -198,16 +205,14 @@
             <td class="desafio">Titulo do Desafio</td>
           </tr>
           <tr>
-            <td class="detalhes">
-                Encerramento
-            </td>
+            <td class="detalhes">Encerramento</td>
             <td class="status">Aprova</td>
           </tr>
         </table>
       </li>
       <li class="list-cards">
         <div>
-          <img src="" alt="">
+          <img src="" alt="" />
         </div>
         <table>
           <tr>
@@ -217,9 +222,7 @@
             <td class="desafio">Titulo do Desafio</td>
           </tr>
           <tr>
-            <td class="detalhes">
-                Encerramento
-            </td>
+            <td class="detalhes">Encerramento</td>
             <td class="status">Aprova</td>
           </tr>
         </table>
