@@ -48,7 +48,7 @@
         </li>
       </ul>
     </nav>
-    <button class="botao-sair">
+    <button type="button" class="botao-sair">
       <a href="http://localhost:4200/home">Sair</a>
     </button>
   </header>
@@ -74,7 +74,9 @@
       </div>
       <table class="table">
         <tr class="th-linha">
-          <th width="10px"><input type="checkbox" name="checkbox" /></th>
+          <th width="10px">
+            <label for=""><input type="checkbox" name="checkbox"></label>
+          </th>
           <th width="10px"></th>
           <th>name</th>
           <th>user status</th>
@@ -93,10 +95,10 @@
             />
           </td>
           <td>
-            <select>
-              <option value=""></option>
-              <option value="">Carlos</option>
-              <option value="">bruno</option>
+            <select name="select">
+              <option value="0"></option>
+              <option value="1">Carlos</option>
+              <option value="2">bruno</option>
             </select>
           </td>
           <td>
@@ -106,7 +108,7 @@
           <td>{{ estabelecimento.formasPagamento[0] }}</td>
           <td>{{ estabelecimento.slogan }}{{ estabelecimento.nome }}</td>
           <td>{{ estabelecimento.valor }}</td>
-          <td><button class="botao-vermais">+</button></td>
+          <td><button type="button"class="botao-vermais">+</button></td>
           <td><button class="botao-vermais pontinhos">+</button></td>
         </tr>
       </table>
