@@ -14,6 +14,8 @@ import {
   styleUrls: ['./estabelecimentos.component.scss'],
 })
 export class EstabelecimentosComponent implements OnInit {
+  estado1 ='Bloqueado';
+  estado2 ='Liberado';
   user!: string;
   estabelecimentos = [
     {

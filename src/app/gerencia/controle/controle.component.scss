@@ -87,12 +87,11 @@ width:78vw
 }
 
 .list-total{
+margin-top: 10px;
 margin-right: 31px;
 width: 258px;
 height: 104px;
 padding: 5px;
-
-
 box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 1px 12px rgba(0, 0, 0, 0.04);
 border-radius: 8px;
 }
@@ -205,6 +204,7 @@ table{
 .status{
   text-align:end
 }
+
 @media only screen and(max-width:1060px) {
   .main_cards{
     flex-wrap: wrap;
@@ -213,7 +213,7 @@ table{
   .list-cards{
     margin-bottom: 20px;
   }
-  
+
 }
 @media only screen and(max-width:948px) {
   .main_total {

@@ -79,7 +79,7 @@
           </th>
           <th width="10px"></th>
           <th>name</th>
-          <th>user status</th>
+          <th>status</th>
           <th>payment staus</th>
           <th>amount</th>
           <th></th>
@@ -104,13 +104,16 @@
           <td>
             <strong>{{ estabelecimento.nome }}</strong>
           </td>
-          <td>{{ estabelecimento.status }}</td>
+          <td>
+            <span class="span-estado b">
+              {{estado1}}
+            </span>
+          </td>
           <td>{{ estabelecimento.formasPagamento[0] }}</td>
           <td>{{ estabelecimento.slogan }}{{ estabelecimento.nome }}</td>
           <td>{{ estabelecimento.valor }}</td>
           <td><button type="button" class="botao-vermais">+</button></td>
           <td><button type="button" class="botao-vermais pontinhos">+</button></td>
->>>>>>> 71b61de14d342b2be2028e490f39cfcbdaa0bb6b
         </tr>
       </table>
     </div>

@@ -246,6 +246,21 @@ select {
   color: #ffffff;
   border: none;
 }
+.span-estado{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #D30000;
+  background: #FFE0E0;
+  border-radius: 10px;
+}
+// .span-estado.l{
+
+//   color: #007F00;
+//   background: #CDFFCD;
+//   border-radius: 10px;
+// }
 
 @media only screen and(max-width:1115px) {
   .secudaria {
