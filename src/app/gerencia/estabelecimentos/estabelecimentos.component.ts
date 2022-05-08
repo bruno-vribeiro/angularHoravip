@@ -1,3 +1,4 @@
+import { Router} from '@angular/router';
 import { AutenticacaoService } from './../../autenticacao/autenticacao.service';
 import {
   Component,
@@ -24,7 +25,7 @@ export class EstabelecimentosComponent implements OnInit {
       _id: '',
     },
   ];
-  estados = [{ estado: false, id:'' }];
+  estados:any = [];
   bloquear() {
     for (let i = 0; i < this.estados.length; i++) {
       console.log(' Bloquear:', this.estados);
@@ -36,12 +37,22 @@ export class EstabelecimentosComponent implements OnInit {
     if(estado==true)
     this.estados.push({ estado: estado, id: id });
   }
-  constructor(private authService: AutenticacaoService) {}
+  constructor(
+    private router : Router,
+    private authService: AutenticacaoService) {}
   ngOnInit(): void {
+    this.user = this.authService.user;
+    console.log(this.user)
+    if(!this.user){
+     this.router.navigate(['home']);
+     return
+
+    }
+
     this.authService.getEstabelecimentos().subscribe((estabelecimentos) => {
       console.log(estabelecimentos);
       this.estabelecimentos = estabelecimentos;
     });
-    this.user = this.authService.user;
+
   }
 }

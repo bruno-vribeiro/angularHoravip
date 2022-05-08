@@ -210,6 +210,16 @@ select {
   width: 88px;
   height: 40px;
 }
+.botao-vermais{
+  width: 100%;
+  background: #ff2232;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 19px;
+  color: #ffffff;
+  border: none;
+}
 @media only screen and(max-width:1099px) {
   .nav_li {
     display: grid;
