@@ -1,29 +1,25 @@
-
-
 .contenier {
   position: relative;
-  top:100px;
-  background: #FFF1F1;
-  border: 1px solid #B61313;
+  top: 100px;
+  background: #fff1f1;
+  border: 1px solid #b61313;
   max-width: 780px;
   margin: auto;
   border-radius: 10px;
- }
-
- .header{
-   text-align: center;
- }
-
- .header_img-logo{
-   background:#FF2232;
-   margin: auto;
-   box-sizing: border-box;
-   max-width: 100%;
-   height: 88px;
-   margin-top: 25px;
-  }
+}
+.header {
+  text-align: center;
+}
+.header_img-logo {
+  background: #ff2232;
+  margin: auto;
+  box-sizing: border-box;
+  max-width: 100%;
+  height: 88px;
+  margin-top: 25px;
+}
 h1 {
-  color: #FFFFFF;
+  color: #ffffff;
   display: inline-block;
   margin-top: 25px;
   vertical-align: top;
@@ -33,66 +29,74 @@ h1 {
   line-height: 28px;
   letter-spacing: 0.15px;
 }
-
 h2 {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 28px;
   text-align: center;
   letter-spacing: 0.15px;
-
-  color: #3C2E2E;
-
+  margin-top: 10px;
+  color: #3c2e2e;
 }
-
-form{
-padding: 20px;
+form {
+  position: relative;
+  padding: 20px;
 }
-
 form .inputDados {
   display: block;
   margin: 15px auto;
   padding: 17px;
-  width: 56%;
+  width: 330px;
   max-width: 330px;
   border: none;
-  border-bottom: 1px solid #A7A7A7;
+  border-bottom: 1px solid #a7a7a7;
   border-radius: 8px 8px 0px 0px;
 }
-#labelCheckbox{
+#labelCheckbox {
   display: block;
-  margin: auto;
   padding: 17px;
   width: 207px;
   border: none;
-  border-bottom: 1px solid #A7A7A7;
+  border-bottom: 1px solid #a7a7a7;
   border-radius: 8px 8px 0px 0px;
 }
-
 .inputDados.btn {
   display: inline-block;
-  border: 1px solid #FF2232;
-  width: 156px;
+  border: 1px solid #ff2232;
   border-radius: 8px;
-
 }
-
 .btn.entra {
-  background: #FF2232;
+  background: #ff2232;
   margin-left: 423px;
 }
-
+.footer-login1 {
+  text-align: center;
+  position: relative;
+  top: -44px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.footer-login2 {
+  text-align: center;
+  position: relative;
+  top: -56px;
+  font-size: 12px;
+  opacity: 0.7;
+}
 #labelCheckbox {
   border: none;
-  margin: auto;
+  position: absolute;
+  left: 29%;
   padding: 0;
-  color: #A7A7A7;
-
+  color: #a7a7a7;
 }
-
 #botaoLogin {
+  width: 156px;
   display: block;
   margin: 50px auto;
-
+  border-radius: 8px;
+}
+@media only screen and(max-width:374px) {
+  form .inputDados {
+    width: 100%;
+  }
 }
