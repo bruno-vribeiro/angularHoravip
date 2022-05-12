@@ -10,6 +10,7 @@ import { Subscribable } from 'rxjs'
 })
 export class LoginComponent implements OnInit {
 
+  
   usuario="";
   senha="";
 

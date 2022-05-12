@@ -65,10 +65,10 @@
         </div>
         <div class="secudaria">
           <button type="button" class="aprovar" ng-click="consoleId()">
-            <span class="span-button1" (click)="bloquear()">Bloquear</span>
+            <span class="span-button1" (click)="bloquear()" >Bloquear</span>
           </button>
           <button type="button" class="aprovar">
-            <span class="span-button2">Liberar</span>
+            <span class="span-button2" (click)="liberar()">Liberar</span>
           </button>
         </div>
       </div>
@@ -102,11 +102,16 @@
             </select>
           </td>
           <td>
-            <strong>{{ estabelecimento.nome }}</strong>
+            <strong>{{ estabelecimento.nome}} </strong>
           </td>
           <td>
-            <span class="span-estado b">
+            <span class="span-estado"
+            *ngIf="checkboxChange"
+            >
               {{estado1}}
+            </span>
+            <span class="span-estado">
+              {{estado2}}
             </span>
           </td>
           <td>{{ estabelecimento.formasPagamento[0] }}</td>

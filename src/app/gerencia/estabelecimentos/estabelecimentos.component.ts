@@ -14,8 +14,8 @@ import {
   styleUrls: ['./estabelecimentos.component.scss'],
 })
 export class EstabelecimentosComponent implements OnInit {
-  estado1 ='Bloqueado';
-  estado2 ='Liberado';
+  estado1 ='oi';
+  estado2 ='';
   user!: string;
   estabelecimentos = [
     {
@@ -30,14 +30,21 @@ export class EstabelecimentosComponent implements OnInit {
   estados:any = [];
   bloquear() {
     for (let i = 0; i < this.estados.length; i++) {
-      console.log(' Bloquear:', this.estados);
+        console.log(' Bloquear:', this.estados);
+    }
+
+  }
+  liberar() {
+    for (let i = 0; i < this.estados.length; i++) {
+      console.log(' Liberar:', this.estados);
     }
   }
   checkboxChange(event: any) {
     let estado = event.target.checked;
     let id = event.target.id;
-    if(estado==true)
+    if(estado==true && id !== this.estados.id){
     this.estados.push({ estado: estado, id: id });
+    }
   }
   constructor(
     private router : Router,
