@@ -7,6 +7,7 @@ import { ControleComponent } from './controle/controle.component';
 import { EstabelecimentosComponent } from './estabelecimentos/estabelecimentos.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { FormsModule } from '@angular/forms';
+import { AgendamentoComponent } from './agendamento/agendamento.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     GerenciaComponent,
     ControleComponent,
     EstabelecimentosComponent,
-    ClienteComponent
+    ClienteComponent,
+    AgendamentoComponent
   ],
   imports: [
     CommonModule,
