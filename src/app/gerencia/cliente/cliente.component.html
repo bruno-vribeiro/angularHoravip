@@ -100,7 +100,7 @@
           <td>
             <strong>{{ estabelecimento.nome }}</strong>
           </td>
-          <td>{{ estados[i] }}</td>
+          <td [ngClass]="{'td-estado':estados[i]=='bloquear', 'td-estado2':estados[i]=='liberar'}">{{ estados[i] }}</td>
           <td>{{ estabelecimento.formasPagamento[0] }}</td>
           <td>{{ estabelecimento.slogan }}</td>
           <td>{{ estabelecimento.valor }}</td>
