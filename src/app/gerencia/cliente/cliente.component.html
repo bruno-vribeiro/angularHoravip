@@ -39,11 +39,11 @@
         </li>
         <li class="nav_li">
           <a routerLink="../agendamento">
-          <img
-            class="nav_img"
-            src="./assets/img/gerencia/comentario.svg"
-            alt="imagem de um Comentários"
-          />
+            <img
+              class="nav_img"
+              src="./assets/img/gerencia/comentario.svg"
+              alt="imagem de um Comentários"
+            />
 
             <span>Agendamento</span>
           </a>
@@ -88,7 +88,7 @@
           <th></th>
           <th>...</th>
         </tr>
-        <tr *ngFor="let estabelecimento of estabelecimentos">
+        <tr *ngFor="let estabelecimento of estabelecimentos; index as i">
           <td class="width"><input type="checkbox" /></td>
           <td>
             <select>
@@ -100,7 +100,7 @@
           <td>
             <strong>{{ estabelecimento.nome }}</strong>
           </td>
-          <td>{{ estabelecimento.status }}</td>
+          <td>{{ estados[i] }}</td>
           <td>{{ estabelecimento.formasPagamento[0] }}</td>
           <td>{{ estabelecimento.slogan }}</td>
           <td>{{ estabelecimento.valor }}</td>
