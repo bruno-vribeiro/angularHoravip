@@ -50,13 +50,13 @@ export class EstabelecimentosComponent implements OnInit {
     private router : Router,
     private authService: AutenticacaoService) {}
   ngOnInit(): void {
-    this.user = this.authService.user;
-    console.log(this.user)
-    if(!this.user){
-     this.router.navigate(['home']);
-     return
+    // this.user = this.authService.user;
+    // console.log(this.user)
+    // if(!this.user){
+    //  this.router.navigate(['home']);
+    //  return
 
-    }
+    // }
 
     this.authService.getEstabelecimentos().subscribe((estabelecimentos) => {
       console.log(estabelecimentos);
