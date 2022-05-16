@@ -14,8 +14,9 @@ import {
   styleUrls: ['./estabelecimentos.component.scss'],
 })
 export class EstabelecimentosComponent implements OnInit {
-  estado1 ='oi';
-  estado2 ='';
+  estadosId:any=[];
+  estados: any=[];
+  selecionado:any=[];
   user!: string;
   estabelecimentos = [
     {
@@ -27,41 +28,70 @@ export class EstabelecimentosComponent implements OnInit {
       _id: '',
     },
   ];
-  estados:any = [];
+
   bloquear() {
-    for (let i = 0; i < this.estados.length; i++) {
-        console.log(' Bloquear:', this.estados);
+    for (let i = 0; i < this.estadosId.length; i++) {
+        console.log(' Bloquear:', this.estadosId);
+    }
+    for (let i = 0;  i< this.estados.length; i++) {
+      if(this.estados[i]=='liberar' && this.selecionado[i]==true)
+        this.estados[i]='bloquear'
+      else
+      console.log('nao')
     }
 
   }
   liberar() {
-    for (let i = 0; i < this.estados.length; i++) {
-      console.log(' Liberar:', this.estados);
+    for (let i = 0; i < this.estadosId.length; i++) {
+      console.log(' Liberar:', this.estadosId);
     }
+    for (let i = 0;  i< this.estados.length; i++) {
+      if(this.estados[i]=='bloquear' && this.selecionado[i]==true)
+        this.estados[i]='liberar'
+      else
+      console.log('nao')
+    }
+
+  console.log(this.estados)
+
   }
   checkboxChange(event: any) {
     let estado = event.target.checked;
     let id = event.target.id;
     if(estado==true && id !== this.estados.id){
-    this.estados.push({ estado: estado, id: id });
+    this.estadosId.push({ estado: estado, id: id });
     }
   }
   constructor(
     private router : Router,
     private authService: AutenticacaoService) {}
   ngOnInit(): void {
-    // this.user = this.authService.user;
-    // console.log(this.user)
-    // if(!this.user){
-    //  this.router.navigate(['home']);
-    //  return
+    this.user = this.authService.user;
+    console.log(this.user)
+    if(!this.user){
+     this.router.navigate(['home']);
+     return
 
-    // }
+    }
 
     this.authService.getEstabelecimentos().subscribe((estabelecimentos) => {
       console.log(estabelecimentos);
       this.estabelecimentos = estabelecimentos;
+      for (let i = 0; i < estabelecimentos.length; i++) {
+        this.status_m(estabelecimentos[i].status)
+
+      }
     });
 
+  }
+
+  status_m(num: any) {
+    if (num == 0) {
+      this.estados.push('bloquear');
+      this.selecionado.push(false);
+    } else {
+      this.estados.push('liberar');
+      this.selecionado.push(false);
+    }
   }
 }

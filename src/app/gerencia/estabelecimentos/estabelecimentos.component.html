@@ -88,12 +88,14 @@
           <th></th>
           <th>...</th>
         </tr>
-        <tr *ngFor="let estabelecimento of estabelecimentos">
+        <tr *ngFor="let estabelecimento of estabelecimentos; index as i">
           <td class="width">
             <input
               [id]="estabelecimento._id"
               type="checkbox"
+              [(ngModel)]="selecionado[i]"
               (change)="checkboxChange($event)"
+
             />
           </td>
           <td>
@@ -106,15 +108,9 @@
           <td>
             <strong>{{ estabelecimento.nome}} </strong>
           </td>
-          <td>
-            <span class="span-estado"
-            *ngIf="checkboxChange"
-            >
-              {{estado1}}
-            </span>
-            <span class="span-estado">
-              {{estado2}}
-            </span>
+          <td [ngClass]="{'td-estado': estados[i]=='bloquear',
+                          'td-estado2':estados[i]=='liberar'}">
+            {{estados[i]}}
           </td>
           <td>{{ estabelecimento.formasPagamento[0] }}</td>
           <td>{{ estabelecimento.slogan }}{{ estabelecimento.nome }}</td>

@@ -246,21 +246,23 @@ select {
   color: #ffffff;
   border: none;
 }
-.span-estado{
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 15px;
-  color: #D30000;
-  text-shadow:0px 0px 10px #ba4f4f;
-  border-radius: 10px;
+tr {
+  vertical-align: baseline;
 }
-// .span-estado.l{
-
-//   color: #007F00;
-//   background: #CDFFCD;
-//   border-radius: 10px;
-// }
+.td-estado{
+  text-align:center;
+  display: inherit;
+  text-shadow: 0px 0px 7px rgb(255 0 0);
+  border: none;
+  color: red;
+}
+.td-estado2{
+  text-align:center;
+  display: inherit;
+  text-shadow: 0px 0px 7px rgb(0 255 0);
+  border: none;
+  color:rgb(1, 100, 1);
+}
 
 @media only screen and(max-width:1115px) {
   .secudaria {

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { AutenticacaoService } from 'src/app/autenticacao/autenticacao.service';
@@ -14,10 +15,19 @@ export class ControleComponent implements OnInit {
   descricao: Object[] = [];
   constructor(
     private http: HttpClient,
-    private authService: AutenticacaoService
+    private authService: AutenticacaoService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
+    this.user = this.authService.user;
+    console.log(this.user)
+    if(!this.user){
+     this.router.navigate(['home']);
+     return
+
+    }
+
     this.authService.getEstabelecimentos().subscribe((estabelecimentos) => {
       console.log(estabelecimentos)
       this.logos.push(estabelecimentos[0].logo);
@@ -38,6 +48,6 @@ export class ControleComponent implements OnInit {
       // console.log(this.descricao)
     });
     this.user = this.authService.user;
-    
+
   }
 }
