@@ -204,6 +204,7 @@ input[type="search"] {
 th,
 td {
   border-bottom: 1px solid #25213b;
+
   padding: 10px;
 }
 
@@ -251,6 +252,8 @@ select {
 }
 tr {
   vertical-align: baseline;
+  border-bottom: 2px solid currentColor;
+  border-top: 2px solid currentColor;
 }
 
 @media only screen and(max-width:892px) {

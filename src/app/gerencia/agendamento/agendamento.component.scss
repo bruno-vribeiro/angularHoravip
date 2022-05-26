@@ -222,6 +222,11 @@ select {
   color: #ffffff;
   border: none;
 }
+tr {
+  vertical-align: baseline;
+  border-bottom: 2px solid currentColor;
+  border-top: 2px solid currentColor;
+}
 @media only screen and(max-width:1099px) {
   .nav_li {
     display: grid;
