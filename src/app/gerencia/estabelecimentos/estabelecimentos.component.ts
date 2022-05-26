@@ -83,6 +83,10 @@ export class EstabelecimentosComponent implements OnInit {
       }
     });
 
+    this.authService.estabelecimentos().subscribe((response)=>{
+      console.log(response)
+    })
+
   }
 
   status_m(num: any) {

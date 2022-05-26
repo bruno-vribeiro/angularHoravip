@@ -200,11 +200,19 @@ td {
   border-bottom: 1px solid #25213b;
   padding: 10px;
 }
-
 select {
-  width: 20px;
-  border-radius: 100%;
+  appearance: none;
+  border: none;
 }
+.td_select{
+display: inline-block;
+position: relative;
+}
+.td_select select{
+  background: #FFF url("./assets/img/select.png");
+}
+
+
 .td-estado{
   text-align:center;
   display: inherit;

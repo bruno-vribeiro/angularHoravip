@@ -48,13 +48,12 @@
             <span>Agendamento</span>
           </a>
         </li>
-        <li>
-          <button class="botao-sair">
-            <a href="http://localhost:4200/home">Sair</a>
-          </button>
-        </li>
       </ul>
     </nav>
+    <a class="sair" href="http://localhost:4200/home">
+      <img src="./assets/img/exit.png" alt="exit" />
+      Sair
+    </a>
   </header>
   <main class="main">
     <div class="main_estabelecimento">
@@ -78,29 +77,41 @@
       </div>
       <table class="table">
         <tr class="th-linha">
-          <th width="10px" ><input type="checkbox" name="checkbox"/></th>
+          <th width="10px"><input type="checkbox" name="checkbox" /></th>
           <th width="10px"></th>
-          <th>name</th>
-          <th>user status</th>
-          <th>payment staus</th>
-          <th>amount</th>
+          <th>nome</th>
+          <th>status</th>
+          <th>vencimento</th>
+          <th>valor</th>
           <th></th>
           <th></th>
           <th>...</th>
         </tr>
         <tr *ngFor="let estabelecimento of estabelecimentos; index as i">
-          <td class="width"><input type="checkbox" [(ngModel)]="selecionado[i]" /></td>
-          <td>
-            <select>
-              <option value=""></option>
-              <option value="">Carlos</option>
-              <option value="">bruno</option>
-            </select>
+          <td class="width">
+            <input type="checkbox" [(ngModel)]="selecionado[i]" />
           </td>
           <td>
-            <strong>{{ estabelecimento.nome }}</strong>
+            <div  class="td_select">
+              <select (change)="Changes($event)">
+                <option *ngFor="let nome of nomes" [value]="nome">
+                  <img src="./assets/img/exit.png" alt="exit" />
+                  {{ nome }}
+                </option>
+              </select>
+            </div>
           </td>
-          <td [ngClass]="{'td-estado':estados[i]=='bloquear', 'td-estado2':estados[i]=='liberar'}">{{ estados[i] }}</td>
+          <td>
+            <strong>{{ nomes[i] }}</strong>
+          </td>
+          <td
+            [ngClass]="{
+              'td-estado': estados[i] == 'bloquear',
+              'td-estado2': estados[i] == 'liberar'
+            }"
+          >
+            {{ estados[i] }}
+          </td>
           <td>{{ estabelecimento.formasPagamento[0] }}</td>
           <td>{{ estabelecimento.slogan }}</td>
           <td>{{ estabelecimento.valor }}</td>

@@ -18,6 +18,7 @@ export class ClienteComponent implements OnInit {
       valor: '',
     },
   ];
+  nomes:any=[]
   estados: any = [];
   selecionado: any =[]
   status_m(num: any) {
@@ -48,6 +49,8 @@ export class ClienteComponent implements OnInit {
       this.estabelecimentos = estabelecimentos;
       for (let i = 0; i < estabelecimentos.length; i++) {
         this.status_m(estabelecimentos[i].status);
+        this.nomes.push(estabelecimentos[i].nome)
+        console.log(this.nomes)
       }
     });
     this.user = this.authService.user;
@@ -70,6 +73,12 @@ export class ClienteComponent implements OnInit {
       }
 
     console.log(this.estados)
+  }
+
+  Changes(event: any){
+    let e= event.path[0].value
+    
+    console.log(this.estabelecimentos)
   }
 
 
