@@ -36,8 +36,13 @@ export class AutenticacaoService {
       this.getOptions()
 
     );
+  }
+  getClientes(): Observable<any> {
+    return this.httpClient.get(
+      'https://api.horavip.exodus.eti.br/session/list-users',
+      this.getOptions()
 
-
+    );
   }
   estabelecimentos(){
     return this.httpClient.get(

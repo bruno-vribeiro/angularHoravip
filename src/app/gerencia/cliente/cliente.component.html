@@ -81,22 +81,21 @@
           <th width="10px"></th>
           <th>nome</th>
           <th>status</th>
-          <th>vencimento</th>
-          <th>valor</th>
+          <th>email</th>
+          <th>telefone</th>
           <th></th>
           <th></th>
-          <th>...</th>
         </tr>
-        <tr *ngFor="let estabelecimento of estabelecimentos; index as i">
+        <tr *ngFor="let cliente of clientes; index as i">
           <td class="width">
             <input type="checkbox" [(ngModel)]="selecionado[i]" />
           </td>
           <td>
             <div  class="td_select">
               <select (change)="Changes($event)">
-                <option *ngFor="let nome of nomes" [value]="nome">
-                  <img src="./assets/img/exit.png" alt="exit" />
-                  {{ nome }}
+                <option *ngFor="let cliente of clientes; index as i" [value]="nomes[i]">
+                  <!-- <img src="./assets/img/exit.png" alt="exit" /> -->
+                  <strong>{{ nomes[i] }}</strong>
                 </option>
               </select>
             </div>
@@ -112,11 +111,15 @@
           >
             {{ estados[i] }}
           </td>
-          <td>{{ estabelecimento.formasPagamento[0] }}</td>
-          <td>{{ estabelecimento.slogan }}</td>
-          <td>{{ estabelecimento.valor }}</td>
-          <td><button class="botao-vermais">+</button></td>
-          <td><button class="botao-vermais potinhos">+</button></td>
+          <td>{{cliente.email}}</td>
+          <td>{{cliente.telefone}}</td>
+          <!-- <td>{{ cliente}}</td> -->
+          <td><button
+            type="button"
+            class="botao-vermais">+</button></td>
+          <td><button
+            type="button"
+            class="botao-vermais pontinhos">+</button></td>
         </tr>
       </table>
     </div>

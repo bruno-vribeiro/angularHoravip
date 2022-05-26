@@ -9,15 +9,7 @@ import { Component, OnInit, NgModule } from '@angular/core';
 })
 export class ClienteComponent implements OnInit {
   user!: string;
-  estabelecimentos = [
-    {
-      nome: '',
-      status: '',
-      formasPagamento: [],
-      slogan: '',
-      valor: '',
-    },
-  ];
+  clientes:any = [];
   nomes:any=[]
   estados: any = [];
   selecionado: any =[]
@@ -45,13 +37,19 @@ export class ClienteComponent implements OnInit {
 
     }
 
-    this.authService.getEstabelecimentos().subscribe((estabelecimentos) => {
-      this.estabelecimentos = estabelecimentos;
-      for (let i = 0; i < estabelecimentos.length; i++) {
-        this.status_m(estabelecimentos[i].status);
-        this.nomes.push(estabelecimentos[i].nome)
-        console.log(this.nomes)
+    this.authService.getClientes().subscribe((clientes) => {
+
+      for (let i = 8; i < clientes.length; i++) {
+        this.status_m(clientes[i].status);
+        this.clientes.push(clientes[i])
+
       }
+      console.log(this.clientes)
+      for (let i = 8; i < clientes.length; i++) {
+        this.nomes.push(clientes[i].nome)
+        // console.log(this.nomes)
+      }
+
     });
     this.user = this.authService.user;
   }
@@ -77,8 +75,8 @@ export class ClienteComponent implements OnInit {
 
   Changes(event: any){
     let e= event.path[0].value
-    
-    console.log(this.estabelecimentos)
+
+    console.log(this.clientes)
   }
 
 
