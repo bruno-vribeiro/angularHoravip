@@ -201,16 +201,20 @@ td {
   padding: 10px;
 }
 select {
-  appearance: none;
-  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  font-weight: 600;
+
 }
 .td_select{
 display: inline-block;
 position: relative;
+
 }
-.td_select select{
-  background: #FFF url("./assets/img/select.png");
-}
+// .td_select select{
+//   background: #FFF url("./assets/img/select.png");
+// }
 
 
 .td-estado{

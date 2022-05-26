@@ -87,16 +87,16 @@
           <th></th>
           <th>...</th>
         </tr>
-        <tr *ngFor="let estabelecimento of estabelecimentos; index as i">
+        <tr *ngFor="let cliente of clientes; index as i">
           <td class="width">
             <input type="checkbox" [(ngModel)]="selecionado[i]" />
           </td>
           <td>
             <div  class="td_select">
               <select (change)="Changes($event)">
-                <option *ngFor="let nome of nomes" [value]="nome">
-                  <img src="./assets/img/exit.png" alt="exit" />
-                  {{ nome }}
+                <option *ngFor="let cliente of clientes; index as i" [value]="nomes[i]">
+                  <!-- <img src="./assets/img/exit.png" alt="exit" /> -->
+                  <strong>{{ nomes[i] }}</strong>
                 </option>
               </select>
             </div>
@@ -112,9 +112,9 @@
           >
             {{ estados[i] }}
           </td>
-          <td>{{ estabelecimento.formasPagamento[0] }}</td>
-          <td>{{ estabelecimento.slogan }}</td>
-          <td>{{ estabelecimento.valor }}</td>
+          <td>10/06/2022</td>
+          <td>R$ 200<br>BRL</td>
+          <!-- <td>{{ cliente}}</td> -->
           <td><button class="botao-vermais">+</button></td>
           <td><button class="botao-vermais potinhos">+</button></td>
         </tr>
