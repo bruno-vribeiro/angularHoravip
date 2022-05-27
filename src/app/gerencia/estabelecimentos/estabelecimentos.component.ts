@@ -98,4 +98,8 @@ export class EstabelecimentosComponent implements OnInit {
       this.selecionado.push(false);
     }
   }
+
+  teste(){
+    alert('testado')
+  }
 }

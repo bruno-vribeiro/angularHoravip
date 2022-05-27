@@ -79,5 +79,9 @@ export class ClienteComponent implements OnInit {
     console.log(this.clientes)
   }
 
+  teste(){
+    alert('testado')
+  }
+
 
 }

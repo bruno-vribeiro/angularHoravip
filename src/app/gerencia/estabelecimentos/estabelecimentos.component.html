@@ -101,10 +101,11 @@
             />
           </td>
           <td>
-            <select name="select">
-              <option value="0"></option>
-              <option value="1">Carlos</option>
-              <option value="2">bruno</option>
+            <select name="select" (ngModel)="estabelecimento.nome">
+              <option
+              *ngFor="let estabelecimento of estabelecimentos"
+              >{{estabelecimento.nome}}</option>
+
             </select>
           </td>
           <td>
@@ -117,8 +118,18 @@
           <td>{{ estabelecimento.formasPagamento[0] }}</td>
           <td>{{ estabelecimento.slogan }}{{ estabelecimento.nome }}</td>
           <td>{{ estabelecimento.valor }}</td>
-          <td><button type="button" class="botao-vermais">+</button></td>
-          <td><button type="button" class="botao-vermais pontinhos">+</button></td>
+          <td>
+            <button
+            type="button"
+            class="botao-vermais"
+            (click)="teste()"
+            >+</button></td>
+          <td>
+            <button
+            type="button"
+            class="botao-vermais pontinhos"
+            (click)="teste()"
+            >+</button></td>
         </tr>
       </table>
     </div>

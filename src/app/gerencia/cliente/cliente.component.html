@@ -91,9 +91,12 @@
             <input type="checkbox" [(ngModel)]="selecionado[i]" />
           </td>
           <td>
-            <div  class="td_select">
+            <div class="td_select">
               <select (change)="Changes($event)">
-                <option *ngFor="let cliente of clientes; index as i" [value]="nomes[i]">
+                <option
+                  *ngFor="let cliente of clientes; index as i"
+                  [value]="nomes[i]"
+                >
                   <!-- <img src="./assets/img/exit.png" alt="exit" /> -->
                   <strong>{{ nomes[i] }}</strong>
                 </option>
@@ -111,15 +114,23 @@
           >
             {{ estados[i] }}
           </td>
-          <td>{{cliente.email}}</td>
-          <td>{{cliente.telefone}}</td>
+          <td>{{ cliente.email }}</td>
+          <td>{{ cliente.telefone }}</td>
           <!-- <td>{{ cliente}}</td> -->
-          <td><button
-            type="button"
-            class="botao-vermais">+</button></td>
-          <td><button
-            type="button"
-            class="botao-vermais pontinhos">+</button></td>
+          <td>
+            <button type="button" class="botao-vermais" (click)="teste()">
+              +
+            </button>
+          </td>
+          <td>
+            <button
+              type="button"
+              class="botao-vermais pontinhos"
+              (click)="teste()"
+            >
+              +
+            </button>
+          </td>
         </tr>
       </table>
     </div>

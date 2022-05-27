@@ -42,4 +42,8 @@ export class AgendamentoComponent implements OnInit {
     this.user = this.authService.user;
   }
 
+  teste(){
+    alert('testado')
+  }
+
 }
