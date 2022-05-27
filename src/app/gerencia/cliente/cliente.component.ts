@@ -73,11 +73,11 @@ export class ClienteComponent implements OnInit {
     console.log(this.estados)
   }
 
-  Changes(event: any){
-    let e= event.path[0].value
+  // Changes(event: any){
+  //   let e= event.path[0].value
 
-    console.log(this.clientes)
-  }
+  //   console.log(this.clientes)
+  // }
 
   teste(){
     alert('testado')

@@ -89,10 +89,10 @@
         <tr *ngFor="let estabelecimento of estabelecimentos">
           <td class="width"><input type="checkbox" /></td>
           <td>
-            <select>
+            <select [(ngModel)]="estabelecimento.nome">
               <option
                 *ngFor="let estabelecimento of estabelecimentos"
-                ng-selected="estabelecimentos[0].nome"
+
               >
                 {{ estabelecimento.nome }}
               </option>

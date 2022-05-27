@@ -101,7 +101,7 @@
             />
           </td>
           <td>
-            <select name="select" (ngModel)="estabelecimento.nome">
+            <select name="select" [(ngModel)]="estabelecimento.nome">
               <option
               *ngFor="let estabelecimento of estabelecimentos"
               >{{estabelecimento.nome}}</option>
